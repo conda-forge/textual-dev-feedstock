@@ -1,5 +1,5 @@
 {% set name = "textual-dev" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/textual_dev-{{ version }}.tar.gz
-  sha256: 9f4c40655cbb56af7ee92805ef14fa24ae98ff8b0ae778c59de7222f1caa7281
+  sha256: e2f8ce4e1c18a16b80282f3257cd2feb49a7ede289a78908c9063ce071bb77ce
 
 build:
   number: 0
