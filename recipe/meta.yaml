@@ -24,6 +24,7 @@ requirements:
   run:
     - python >=3.8,<4
     - textual >=0.36.0
+    - textual-serve >=1.0.3
     - aiohttp >=3.8.1
     - click >=8.1.2
     - msgpack-python >=1.0.3
