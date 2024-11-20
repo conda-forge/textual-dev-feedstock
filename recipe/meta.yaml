@@ -1,5 +1,5 @@
 {% set name = "textual-dev" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/textual_dev-{{ version }}.tar.gz
-  sha256: 0d0d4523a09566bae56eb9ebc4fcbb09069d0f335448e6b9b10dd2d805606bd8
+  sha256: bf1a50eaaff4cd6a863535dd53f06dbbd62617c371604f66f56de3908220ccd5
 
 build:
   number: 0
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4
+    - python >=3.8.1,<4
     - poetry-core >=1.2.0
     - pip
   run:
-    - python >=3.8,<4
-    - textual >=0.36.0
+    - python >=3.8.1,<4
+    - textual >=0.86.2
     - textual-serve >=1.0.3
     - aiohttp >=3.8.1
     - click >=8.1.2
