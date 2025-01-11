@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/textual_dev-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/textual_dev-{{ version }}.tar.gz
   sha256: bf1a50eaaff4cd6a863535dd53f06dbbd62617c371604f66f56de3908220ccd5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install . -vv
   entry_points:
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8.1,<4
+    - python {{ python_min }}
     - poetry-core >=1.2.0
     - pip
   run:
-    - python >=3.8.1,<4
+    - python >={{ python_min }},<4
     - textual >=0.86.2
     - textual-serve >=1.0.3
     - aiohttp >=3.8.1
@@ -31,6 +31,8 @@ requirements:
     - typing_extensions >=4.4.0,<5.0.0
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - textual --help
 
